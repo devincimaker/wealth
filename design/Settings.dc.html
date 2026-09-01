@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500;600;700&display=swap">
+  <style>
+    body { margin:0; font-family:-apple-system,'SF Pro Text','Helvetica Neue',sans-serif; background:#0E0F13; }
+    a { color:#6E8BFF; } a:hover { color:#8CA2FF; }
+    .mono { font-family:'Spline Sans Mono',ui-monospace,'SF Mono',Menlo,monospace; }
+    .eyebrow { font-family:'Spline Sans Mono',ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:0.14em; font-weight:600; color:#616774; }
+    .card { background:#171A21; border:1px solid #22252E; border-radius:18px; }
+    .srow { display:flex; align-items:center; justify-content:space-between; padding:15px 18px; }
+    .slabel { font-size:15px; font-weight:500; color:#F3F4F8; }
+    .sval { display:flex; align-items:center; gap:8px; font-size:15px; color:#9AA0AF; }
+    .chev { width:14px; height:14px; color:#4A4F5C; }
+    .hair { height:1px; background:#22252E; margin:0 18px; }
+  </style>
+</helmet>
+<div style="width:390px;height:844px;background:#14161C;color:#F3F4F8;display:flex;flex-direction:column;overflow:hidden;border-radius:28px 28px 0 0;border-top:1px solid #272B35">
+
+  <div style="display:flex;justify-content:center;padding:12px 0 2px"><div style="width:36px;height:5px;border-radius:3px;background:#2E323E"></div></div>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 24px 22px">
+    <div style="font-size:20px;font-weight:700">Settings</div>
+    <div style="width:32px;height:32px;border-radius:16px;background:#1F222B;display:flex;align-items:center;justify-content:center;color:#9AA0AF">
+      <svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:22px;padding:0 20px">
+
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="eyebrow" style="padding-left:6px">CURRENCY</div>
+      <div class="card">
+        <div class="srow">
+          <span class="slabel">Base currency</span>
+          <span class="sval">US Dollar
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+          </span>
+        </div>
+        <div class="hair"></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding:15px 18px">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <span class="slabel">Dólar blue</span>
+            <span class="mono" style="font-size:15px;font-weight:600;font-variant-numeric:tabular-nums">AR$ 1.485 / US$</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;color:#616774">
+            <svg style="width:13px;height:13px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.6"></path><path d="M20 3v4h-4"></path></svg>
+            <span style="font-size:12px">Updated today, 09:12 · DolarAPI</span>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:12px;color:#616774;padding:0 6px;line-height:1.5">Rates refresh automatically on launch. Totals always convert at today's rate.</div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="eyebrow" style="padding-left:6px">ORGANIZE</div>
+      <div class="card">
+        <div class="srow">
+          <span class="slabel">Categories</span>
+          <span class="sval">9
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="eyebrow" style="padding-left:6px">DATA</div>
+      <div class="card">
+        <div class="srow">
+          <span class="slabel">iCloud sync</span>
+          <span class="sval" style="color:#7DDB9C">
+            <svg style="width:16px;height:16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 1 1 .8-8.9A6 6 0 0 1 19 11a3.5 3.5 0 0 1-1 7H7z"></path><path d="M9.5 14l2 2 3.5-3.5"></path></svg>
+            Up to date
+          </span>
+        </div>
+      </div>
+      <div style="font-size:12px;color:#616774;padding:0 6px;line-height:1.5">Everything lives on this phone and in your private iCloud. Nowhere else.</div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:auto;padding:0 0 36px;display:flex;justify-content:center">
+    <span class="mono" style="font-size:11px;color:#3A3F4C;letter-spacing:0.08em">WEALTH 0.1</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

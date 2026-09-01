@@ -1,0 +1,22 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 390, "h": 844, "title": "Home" },
+    { "file": "VoiceCapture.dc.html", "x": 490, "y": 0, "w": 390, "h": 844, "title": "Voice capture" },
+    { "file": "TickerPill.dc.html", "x": 980, "y": 0, "w": 390, "h": 844, "title": "Home — queue working" },
+    { "file": "ActivityLog.dc.html", "x": 1470, "y": 0, "w": 390, "h": 844, "title": "Activity log" },
+    { "file": "ManualAdd.dc.html", "x": 1960, "y": 0, "w": 390, "h": 844, "title": "Manual add" },
+    { "file": "Months.dc.html", "x": 0, "y": 990, "w": 390, "h": 844, "title": "Months" },
+    { "file": "Subscriptions.dc.html", "x": 490, "y": 990, "w": 390, "h": 844, "title": "Subscriptions" },
+    { "file": "Settings.dc.html", "x": 980, "y": 990, "w": 390, "h": 844, "title": "Settings" },
+    { "file": "PillStates.dc.html", "x": 1470, "y": 990, "w": 390, "h": 620, "title": "Pill states" },
+    { "file": "AltLight.dc.html", "x": 1960, "y": 990, "w": 390, "h": 844, "title": "Alt: light sketch" },
+    { "file": "Categories.dc.html", "x": 0, "y": 1980, "w": 390, "h": 844, "title": "Categories" },
+    { "file": "CategoryEdit.dc.html", "x": 490, "y": 1980, "w": 390, "h": 844, "title": "Edit category" },
+    { "file": "CategoryDelete.dc.html", "x": 980, "y": 1980, "w": 390, "h": 844, "title": "Delete category" }
+  ],
+  "annotations": [
+    { "id": "flow-note", "x": 0, "y": -170, "w": 360, "text": "Wealth v1 — dark ledger direction, optimistic capture (HAB-134 style).\nOne + button: tap = manual half sheet · long-press = mic. Release saves immediately — no confirmation sheet. The ticker pill summarizes the queue; tap it for the Activity log (undo / edit / retry).\nBottom row: months, subscriptions, settings, pill states, and a rough light-direction sketch." },
+    { "id": "categories-note", "x": 0, "y": 1850, "w": 340, "text": "Category management — reached from Settings → Categories.\nDrag to reorder (sets chip order everywhere), swipe to delete. Deleting always asks where the expenses go. Create and edit share one sheet: name + icon." }
+  ],
+  "launch": { "view": "canvas" }
+}

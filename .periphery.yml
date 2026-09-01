@@ -1,0 +1,18 @@
+# Periphery is this repo's knip (§5): whole-graph dead-code detection.
+# Only two kinds of exception are allowed here, each stating why:
+#   1. code genuinely reached without a reference (runtime/framework entry points)
+#   2. code parked on purpose, naming the tasks.md entry that will use or delete it
+project: Wealth.xcodeproj
+schemes:
+  - Wealth
+retain_public: false
+# SwiftUI previews and @main are reached by the runtime, not by imports.
+retain_swift_ui_previews: true
+report_exclude:
+  # Parked on purpose (exception kind 2):
+  # - Theme.swift: the full canvas palette; consumed as screens land (tasks.md M2).
+  #   Remove this entry when M2 merges so unused tokens surface again.
+  - "Sources/DesignSystem/Theme.swift"
+  # - Models: convenience initializers used by the M2 manual-add flow (tasks.md M2).
+  #   Remove with M2 for the same reason.
+  - "Sources/Models/*"

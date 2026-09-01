@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500;600;700&display=swap">
+  <style>
+    body { margin:0; font-family:-apple-system,'SF Pro Text','Helvetica Neue',sans-serif; background:#0E0F13; }
+    a { color:#6E8BFF; } a:hover { color:#8CA2FF; }
+    .mono { font-family:'Spline Sans Mono',ui-monospace,'SF Mono',Menlo,monospace; }
+    .eyebrow { font-family:'Spline Sans Mono',ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:0.14em; font-weight:600; color:#616774; }
+    .ic { width:20px; height:20px; }
+    .srow { display:flex; align-items:center; gap:12px; padding:13px 20px; }
+    .sini { width:40px; height:40px; border-radius:13px; background:#1A1E27; color:#C9CDD8; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:15px; font-weight:700; }
+    .smain { flex:1; min-width:0; display:flex; flex-direction:column; gap:2px; }
+    .sname { font-size:15px; font-weight:500; color:#F3F4F8; }
+    .smeta { font-size:12px; color:#616774; }
+    .samt { display:flex; flex-direction:column; align-items:flex-end; gap:2px; }
+    .sval { font-size:15px; font-weight:600; color:#F3F4F8; font-variant-numeric:tabular-nums; }
+    .ssub { font-size:11px; color:#616774; font-variant-numeric:tabular-nums; }
+    .tab { flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; color:#616774; }
+    .tab.on { color:#6E8BFF; }
+    .tlabel { font-size:10px; font-weight:600; letter-spacing:0.04em; }
+  </style>
+</helmet>
+<div style="width:390px;height:844px;background:#0E0F13;color:#F3F4F8;display:flex;flex-direction:column;overflow:hidden;position:relative">
+
+  <div style="padding:64px 20px 18px;font-size:28px;font-weight:700">Subscriptions</div>
+
+  <div style="margin:0 20px 8px;background:#171A21;border:1px solid #22252E;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px">
+    <div class="eyebrow">MONTHLY BURN</div>
+    <div style="display:flex;align-items:baseline;gap:8px">
+      <span class="mono" style="font-size:36px;font-weight:600;letter-spacing:-0.02em;font-variant-numeric:tabular-nums">US$ 75</span>
+      <span style="font-size:14px;color:#9AA0AF">/ month</span>
+    </div>
+    <div style="font-size:12px;color:#616774">6 active · next: Netflix posts Sep 12</div>
+  </div>
+
+  <div style="flex:1;overflow:hidden;padding-top:8px">
+
+    <div class="srow">
+      <div class="sini" style="background:#231F2E;color:#B79CFF">C</div>
+      <div class="smain"><div class="sname">Claude Pro</div><div class="smeta">Monthly · posts on the 1st</div></div>
+      <div class="samt"><div class="sval mono">US$ 20</div></div>
+    </div>
+
+    <div class="srow">
+      <div class="sini" style="background:#2E1D20;color:#FF8080">N</div>
+      <div class="smain"><div class="sname">Netflix</div><div class="smeta">Monthly · posts on the 12th</div></div>
+      <div class="samt"><div class="sval mono">AR$ 15.999</div><div class="ssub mono">≈ US$ 11 / mo</div></div>
+    </div>
+
+    <div class="srow">
+      <div class="sini" style="background:#1C2A22;color:#7DDB9C">S</div>
+      <div class="smain"><div class="sname">Spotify</div><div class="smeta">Monthly · posts on the 18th</div></div>
+      <div class="samt"><div class="sval mono">AR$ 6.999</div><div class="ssub mono">≈ US$ 5 / mo</div></div>
+    </div>
+
+    <div class="srow">
+      <div class="sini" style="background:#1D2530;color:#7FB5FF">M</div>
+      <div class="smain"><div class="sname">Megatlon</div><div class="smeta">Monthly · posts on the 1st</div></div>
+      <div class="samt"><div class="sval mono">AR$ 42.000</div><div class="ssub mono">≈ US$ 28 / mo</div></div>
+    </div>
+
+    <div class="srow">
+      <div class="sini">i</div>
+      <div class="smain"><div class="sname">iCloud+</div><div class="smeta">Monthly · posts on the 1st</div></div>
+      <div class="samt"><div class="sval mono">US$ 2,99</div></div>
+    </div>
+
+    <div class="srow">
+      <div class="sini" style="background:#2A2620;color:#E8C685">N</div>
+      <div class="smain"><div class="sname">Notion</div><div class="smeta">Yearly · posts Mar 14</div></div>
+      <div class="samt"><div class="sval mono">US$ 96 / yr</div><div class="ssub mono">≈ US$ 8 / mo</div></div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin:18px 20px 0;height:48px;border-radius:16px;border:1px dashed #2E323E;color:#9AA0AF;font-size:14px;font-weight:500">
+      <svg style="width:16px;height:16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+      New subscription
+    </div>
+
+  </div>
+
+  <div style="position:absolute;left:0;right:0;bottom:0;height:82px;padding-bottom:18px;background:rgba(14,15,19,0.92);border-top:1px solid #1F222B;display:flex;align-items:center">
+    <div class="tab">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg>
+      <span class="tlabel">Expenses</span>
+    </div>
+    <div class="tab">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 20V10M12 20V4M19 20v-7"></path></svg>
+      <span class="tlabel">Months</span>
+    </div>
+    <div class="tab on">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+      <span class="tlabel">Subs</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

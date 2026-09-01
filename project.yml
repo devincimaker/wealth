@@ -1,0 +1,49 @@
+name: Wealth
+options:
+  bundleIdPrefix: com.capybarastudios
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    DEVELOPMENT_TEAM: D4ADFZ3XZL
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  Wealth:
+    type: application
+    platform: iOS
+    sources: [Sources]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.capybarastudios.wealth
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: Wealth
+        UILaunchScreen: {}
+        # The design commits to the dark ledger look; never ship un-designed auto-light.
+        UIUserInterfaceStyle: Dark
+        NSMicrophoneUsageDescription: Wealth records your voice only while you hold the log button, to turn what you say into an expense.
+        ITSAppUsesNonExemptEncryption: false
+
+  WealthTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [Tests]
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - target: Wealth
+
+schemes:
+  Wealth:
+    build:
+      targets:
+        Wealth: all
+    test:
+      targets: [WealthTests]

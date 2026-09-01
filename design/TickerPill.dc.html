@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500;600;700&display=swap">
+  <style>
+    body { margin:0; font-family:-apple-system,'SF Pro Text','Helvetica Neue',sans-serif; background:#0E0F13; }
+    a { color:#6E8BFF; } a:hover { color:#8CA2FF; }
+    .mono { font-family:'Spline Sans Mono',ui-monospace,'SF Mono',Menlo,monospace; }
+    .eyebrow { font-family:'Spline Sans Mono',ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:0.14em; color:#616774; font-weight:600; }
+    .ic { width:20px; height:20px; }
+    .row { display:flex; align-items:center; gap:12px; padding:11px 20px; }
+    .iconc { width:40px; height:40px; border-radius:13px; background:#1A1E27; color:#9AA0AF; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .rmain { flex:1; min-width:0; display:flex; flex-direction:column; gap:2px; }
+    .rname { font-size:15px; font-weight:500; color:#F3F4F8; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .rmeta { font-size:12px; color:#616774; }
+    .ramt { display:flex; flex-direction:column; align-items:flex-end; gap:2px; }
+    .amt { font-size:15px; font-weight:600; color:#F3F4F8; font-variant-numeric:tabular-nums; }
+    .approx { font-size:11px; color:#616774; font-variant-numeric:tabular-nums; }
+    .dhead { display:flex; justify-content:space-between; align-items:baseline; padding:18px 20px 6px; }
+    .tab { flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; color:#616774; }
+    .tab.on { color:#6E8BFF; }
+    .tlabel { font-size:10px; font-weight:600; letter-spacing:0.04em; }
+  </style>
+</helmet>
+<div style="width:390px;height:844px;background:#0E0F13;color:#F3F4F8;display:flex;flex-direction:column;overflow:hidden;position:relative">
+
+  <div style="padding:64px 20px 10px;display:flex;flex-direction:column;gap:8px">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="eyebrow">SEPTEMBER 2026</div>
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#616774" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"></path></svg>
+    </div>
+    <div class="mono" style="font-size:42px;font-weight:600;letter-spacing:-0.02em;line-height:1;font-variant-numeric:tabular-nums">US$ 1.284</div>
+    <div style="font-size:13px;color:#9AA0AF">US$ 412 in dollars&nbsp;&nbsp;+&nbsp;&nbsp;AR$ 1.295.000 in pesos</div>
+  </div>
+
+  <div style="flex:1;overflow:hidden;display:flex;flex-direction:column">
+
+    <div class="dhead"><span class="eyebrow" style="color:#9AA0AF">TODAY · MON 1</span><span class="mono" style="font-size:12px;color:#616774;font-variant-numeric:tabular-nums">US$ 20</span></div>
+
+    <div class="row">
+      <div class="iconc"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div>
+      <div class="rmain"><div class="rname">Claude Pro</div><div class="rmeta">Subscriptions · posted automatically</div></div>
+      <div class="ramt"><div class="amt mono">US$ 20</div></div>
+    </div>
+
+    <div class="dhead"><span class="eyebrow" style="color:#9AA0AF">YESTERDAY · SUN 31</span><span class="mono" style="font-size:12px;color:#616774;font-variant-numeric:tabular-nums">US$ 34</span></div>
+
+    <div class="row">
+      <div class="iconc"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"></circle><circle cx="17" cy="20" r="1.4"></circle><path d="M3 4h2l2.5 12h10L20 8H6"></path></svg></div>
+      <div class="rmain"><div class="rname">Verdulería Doña Rosa</div><div class="rmeta">Groceries</div></div>
+      <div class="ramt"><div class="amt mono">AR$ 18.500</div><div class="approx mono">≈ US$ 12</div></div>
+    </div>
+
+    <div class="row">
+      <div class="iconc"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 15l1.4-4.6A2 2 0 0 1 8.8 9h6.4a2 2 0 0 1 1.9 1.4L18.5 15"></path><rect x="4" y="14" width="16" height="5" rx="1.6"></rect></svg></div>
+      <div class="rmain"><div class="rname">Uber a Palermo</div><div class="rmeta">Transport</div></div>
+      <div class="ramt"><div class="amt mono">AR$ 7.200</div><div class="approx mono">≈ US$ 5</div></div>
+    </div>
+
+    <div class="row">
+      <div class="iconc"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"></path></svg></div>
+      <div class="rmain"><div class="rname">Farmacity</div><div class="rmeta">Health</div></div>
+      <div class="ramt"><div class="amt mono">AR$ 24.900</div><div class="approx mono">≈ US$ 17</div></div>
+    </div>
+
+    <div class="dhead"><span class="eyebrow" style="color:#9AA0AF">FRI 29 AUG</span><span class="mono" style="font-size:12px;color:#616774;font-variant-numeric:tabular-nums">US$ 22</span></div>
+
+    <div class="row">
+      <div class="iconc"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M7 5v14M17 5v14"></path></svg></div>
+      <div class="rmain"><div class="rname">Cine con Flor</div><div class="rmeta">Entertainment</div></div>
+      <div class="ramt"><div class="amt mono">AR$ 22.000</div><div class="approx mono">≈ US$ 15</div></div>
+    </div>
+
+  </div>
+
+  <div style="position:absolute;left:0;right:0;bottom:82px;height:120px;background:linear-gradient(180deg,rgba(14,15,19,0) 0%,#0E0F13 70%)"></div>
+
+  <div style="position:absolute;left:0;right:0;bottom:106px;display:flex;justify-content:center">
+    <div style="display:flex;align-items:center;gap:10px;height:48px;padding:0 8px 0 14px;border-radius:24px;background:#171A21;border:1px solid #272B35;box-shadow:0 8px 24px rgba(0,0,0,0.4);max-width:340px">
+      <svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="none" stroke="#E8B45A" stroke-width="2.4" stroke-linecap="round"><path d="M12 3a9 9 0 1 1-6.4 2.6"></path></svg>
+      <span style="font-size:13px;font-weight:500;color:#F3F4F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Logging AR$ 40.000 · Cena con amigos…</span>
+      <span class="mono" style="background:#E8B45A;color:#14161C;font-size:11px;font-weight:700;border-radius:12px;padding:3px 8px">+1</span>
+    </div>
+  </div>
+
+  <div style="position:absolute;left:0;right:0;bottom:0;height:82px;padding-bottom:18px;background:rgba(14,15,19,0.92);border-top:1px solid #1F222B;display:flex;align-items:center">
+    <div class="tab on">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg>
+      <span class="tlabel">Expenses</span>
+    </div>
+    <div class="tab">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 20V10M12 20V4M19 20v-7"></path></svg>
+      <span class="tlabel">Months</span>
+    </div>
+    <div class="tab">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+      <span class="tlabel">Subs</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,39 @@
+# Two jobs, like the sibling repos' lint configs: catch bugs, and enforce AGENTS.md.
+# Every rule turned off or tuned here states why (§5).
+
+included:
+  - Sources
+  - Tests
+
+# §5: a file over 300 code lines is doing more than one thing; splitting is the fix.
+file_length:
+  warning: 300
+  error: 350
+  ignore_comment_only_lines: true
+
+# Small structure guards against agent-written slop.
+cyclomatic_complexity:
+  warning: 12
+function_body_length:
+  warning: 60
+type_body_length:
+  warning: 250
+
+line_length:
+  warning: 140
+  ignores_comments: true
+  ignores_urls: true
+
+identifier_name:
+  min_length: 2 # `id`, `to`, `x` in geometry are idiomatic Swift
+
+disabled_rules:
+  - todo # TODO(voice)/TODO(rates) stubs are deliberate and greppable (§8); the gate is Periphery + tasks.md, not a lint warning
+  - trailing_comma # style noise with no bug-catching value; Xcode's formatter and this rule disagree
+
+opt_in_rules:
+  - empty_count # `isEmpty` over `count == 0`: a real perf/intent rule
+  - closure_end_indentation
+  - contains_over_filter_is_empty
+  - redundant_type_annotation
+  - unowned_variable_capture # unowned is a crash waiting for a lifetime nobody proved; require weak or a reason

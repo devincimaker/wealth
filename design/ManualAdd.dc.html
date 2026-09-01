@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500;600;700&display=swap">
+  <style>
+    body { margin:0; font-family:-apple-system,'SF Pro Text','Helvetica Neue',sans-serif; background:#0E0F13; }
+    a { color:#6E8BFF; } a:hover { color:#8CA2FF; }
+    .mono { font-family:'Spline Sans Mono',ui-monospace,'SF Mono',Menlo,monospace; }
+    .eyebrow { font-family:'Spline Sans Mono',ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:0.14em; font-weight:600; color:#616774; }
+    .ic { width:20px; height:20px; }
+    .cat { display:flex; align-items:center; gap:7px; height:44px; padding:0 14px; border-radius:22px; background:#1A1E27; border:1px solid #272B35; color:#9AA0AF; font-size:13px; font-weight:500; }
+    .cat svg { width:15px; height:15px; }
+    .cat.on { background:#1F2530; border-color:#4F68E8; color:#F3F4F8; }
+    .cat.on svg { color:#6E8BFF; }
+  </style>
+</helmet>
+<div style="width:390px;height:844px;background:#14161C;color:#F3F4F8;display:flex;flex-direction:column;overflow:hidden;border-radius:28px 28px 0 0;border-top:1px solid #272B35">
+
+  <div style="display:flex;justify-content:center;padding:12px 0 2px"><div style="width:36px;height:5px;border-radius:3px;background:#2E323E"></div></div>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 24px 0">
+    <div style="font-size:20px;font-weight:700">New expense</div>
+    <div style="width:32px;height:32px;border-radius:16px;background:#1F222B;display:flex;align-items:center;justify-content:center;color:#9AA0AF">
+      <svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;align-items:center;gap:18px;padding:36px 24px 28px">
+    <div style="display:flex;background:#1A1E27;border:1px solid #272B35;border-radius:12px;padding:3px">
+      <div class="mono" style="padding:7px 18px;border-radius:9px;background:#4F68E8;color:#FFFFFF;font-size:13px;font-weight:600">AR$</div>
+      <div class="mono" style="padding:7px 18px;border-radius:9px;color:#9AA0AF;font-size:13px;font-weight:600">US$</div>
+    </div>
+    <div style="display:flex;align-items:baseline;gap:8px">
+      <span class="mono" style="font-size:52px;font-weight:600;letter-spacing:-0.02em;font-variant-numeric:tabular-nums">24.900</span>
+      <span style="width:3px;height:44px;border-radius:2px;background:#4F68E8"></span>
+    </div>
+    <div class="mono" style="font-size:13px;color:#616774;font-variant-numeric:tabular-nums">≈ US$ 16,77</div>
+  </div>
+
+  <div style="padding:0 24px;display:flex;flex-direction:column;gap:12px">
+    <div class="eyebrow">CATEGORY</div>
+    <div style="display:flex;flex-wrap:wrap;gap:9px">
+      <div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v4a2 2 0 0 0 4 0V3"></path><path d="M7 3v18"></path><path d="M17 3c-1.6 1.2-2.5 3.2-2.5 5.5 0 2 1 2.5 2.5 2.5V21"></path></svg>Food &amp; Drink</div>
+      <div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"></circle><circle cx="17" cy="20" r="1.4"></circle><path d="M3 4h2l2.5 12h10L20 8H6"></path></svg>Groceries</div>
+      <div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 15l1.4-4.6A2 2 0 0 1 8.8 9h6.4a2 2 0 0 1 1.9 1.4L18.5 15"></path><rect x="4" y="14" width="16" height="5" rx="1.6"></rect></svg>Transport</div>
+      <div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"></path><path d="M6 9.5V20h12V9.5"></path></svg>Housing</div>
+      <div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>Subscriptions</div>
+      <div class="cat on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"></path></svg>Health</div>
+      <div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M7 5v14M17 5v14"></path></svg>Entertainment</div>
+      <div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3L3 10.5l6.5 2L11 20l3.5-5.5L21 3z"></path></svg>Travel</div>
+      <div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg>Other</div>
+    </div>
+  </div>
+
+  <div style="padding:24px 24px 0;display:flex;flex-direction:column">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 0;border-bottom:1px solid #22252E">
+      <span style="font-size:13px;color:#9AA0AF">Date</span>
+      <span style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:500">Yesterday, Aug 31
+        <svg style="width:14px;height:14px;color:#4A4F5C" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:15px 0">
+      <span style="font-size:13px;color:#9AA0AF">Note</span>
+      <span style="font-size:15px;color:#616774">Farmacia, ibuprofeno</span>
+    </div>
+  </div>
+
+  <div style="margin-top:auto;padding:0 24px 40px">
+    <div style="height:54px;border-radius:16px;background:#4F68E8;display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-size:16px;font-weight:600">Save expense</div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500;600;700&display=swap">
+  <style>
+    body { margin:0; font-family:-apple-system,'SF Pro Text','Helvetica Neue',sans-serif; background:#0E0F13; }
+    a { color:#6E8BFF; } a:hover { color:#8CA2FF; }
+    .mono { font-family:'Spline Sans Mono',ui-monospace,'SF Mono',Menlo,monospace; }
+    .eyebrow { font-family:'Spline Sans Mono',ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:0.14em; font-weight:600; color:#616774; }
+    .arow { display:flex; gap:12px; padding:16px 0; border-bottom:1px solid #22252E; }
+    .puck { width:36px; height:36px; border-radius:12px; background:#1A1E27; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .amain { flex:1; min-width:0; display:flex; flex-direction:column; gap:5px; }
+    .atitle { font-size:14px; font-weight:600; color:#F3F4F8; line-height:1.3; }
+    .aquote { font-size:12px; color:#616774; line-height:1.4; }
+    .atime { font-size:11px; color:#4A4F5C; }
+    .chip { font-size:11px; font-weight:600; border-radius:12px; padding:4px 10px; flex-shrink:0; align-self:flex-start; }
+    .acts { display:flex; gap:8px; padding-top:4px; }
+    .apill { font-size:12px; font-weight:600; border:1px solid #2E323E; border-radius:15px; padding:6px 13px; color:#C9CDD8; }
+    .ghostrow { height:56px; border-radius:14px; background:#171A21; }
+  </style>
+</helmet>
+<div style="width:390px;height:844px;background:#0E0F13;color:#F3F4F8;position:relative;overflow:hidden">
+
+  <div style="position:absolute;inset:0;opacity:0.14;display:flex;flex-direction:column;gap:14px;padding:64px 20px">
+    <div style="width:120px;height:12px;border-radius:6px;background:#3A3F4C"></div>
+    <div style="width:210px;height:40px;border-radius:10px;background:#3A3F4C"></div>
+    <div class="ghostrow"></div>
+    <div class="ghostrow"></div>
+  </div>
+
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,15,19,0.3) 0%,rgba(14,15,19,0.92) 30%)"></div>
+
+  <div style="position:absolute;left:0;right:0;bottom:0;top:150px;background:#171A21;border-radius:28px 28px 0 0;border-top:1px solid #272B35;padding:12px 24px 24px;display:flex;flex-direction:column;overflow:hidden">
+
+    <div style="display:flex;justify-content:center;padding-bottom:14px"><div style="width:36px;height:5px;border-radius:3px;background:#2E323E"></div></div>
+
+    <div style="display:flex;flex-direction:column;gap:6px;padding-bottom:8px">
+      <div style="font-size:20px;font-weight:700">Activity</div>
+      <div style="font-size:12px;color:#616774;line-height:1.5">Saves happen right away, on their own — lock your phone whenever. Any expense can be undone.</div>
+    </div>
+
+    <div class="arow">
+      <div class="puck"><svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="none" stroke="#E8B45A" stroke-width="2.4" stroke-linecap="round"><path d="M12 3a9 9 0 1 1-6.4 2.6"></path></svg></div>
+      <div class="amain">
+        <div class="atitle">Logging AR$ 40.000 · Cena con amigos…</div>
+        <div class="aquote">“cuarenta mil pesos, cena con amigos en La Carnicería”</div>
+        <div class="atime">just now</div>
+        <div class="acts"><span class="apill">Cancel</span></div>
+      </div>
+      <span class="chip" style="background:#2E2818;color:#E8B45A">Working…</span>
+    </div>
+
+    <div class="arow">
+      <div class="puck"><svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="none" stroke="#7DDB9C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.5 2.5L16 9.5"></path></svg></div>
+      <div class="amain">
+        <div class="atitle">Logged AR$ 12.400 · Groceries</div>
+        <div class="aquote">“doce mil cuatrocientos en el chino de la esquina”</div>
+        <div class="atime">2m ago</div>
+        <div class="acts"><span class="apill">Undo</span><span class="apill">Edit</span></div>
+      </div>
+      <span class="chip" style="background:#1B2A21;color:#7DDB9C">Logged</span>
+    </div>
+
+    <div class="arow">
+      <div class="puck"><svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="none" stroke="#FF6262" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M9 9l6 6M15 9l-6 6"></path></svg></div>
+      <div class="amain">
+        <div class="atitle">Didn't catch an amount</div>
+        <div class="aquote">“eh… anotá lo del súper de hoy”</div>
+        <div class="atime">12m ago</div>
+        <div class="acts"><span class="apill" style="color:#E8B45A;border-color:#4A3F22">Retry</span><span class="apill">Dismiss</span></div>
+      </div>
+      <span class="chip" style="background:#2E1D20;color:#FF8080">Failed</span>
+    </div>
+
+    <div class="arow" style="border-bottom:none">
+      <div class="puck" style="opacity:0.6"><svg style="width:18px;height:18px" viewBox="0 0 24 24" fill="none" stroke="#616774" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H9"></path></svg></div>
+      <div class="amain">
+        <div class="atitle" style="color:#616774;text-decoration:line-through">Logged AR$ 9.800 · Café Registrado</div>
+        <div class="aquote">“nueve mil ochocientos, café con Juan”</div>
+        <div class="atime">1h ago</div>
+        <div class="acts"><span class="apill">Restore</span></div>
+      </div>
+      <span class="chip" style="background:#1F222B;color:#9AA0AF">Undone</span>
+    </div>
+
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500;600;700&display=swap">
+  <style>
+    body { margin:0; font-family:-apple-system,'SF Pro Text','Helvetica Neue',sans-serif; background:#0E0F13; }
+    a { color:#6E8BFF; } a:hover { color:#8CA2FF; }
+    .mono { font-family:'Spline Sans Mono',ui-monospace,'SF Mono',Menlo,monospace; }
+    .eyebrow { font-family:'Spline Sans Mono',ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:0.14em; font-weight:600; color:#616774; }
+    .ic { width:20px; height:20px; }
+    .crow { display:flex; align-items:center; gap:12px; padding:10px 20px; }
+    .cico { width:34px; height:34px; border-radius:11px; background:#1A1E27; color:#9AA0AF; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .cico svg { width:17px; height:17px; }
+    .cmain { flex:1; min-width:0; display:flex; flex-direction:column; gap:6px; }
+    .ctop { display:flex; justify-content:space-between; align-items:baseline; }
+    .cname { font-size:14px; font-weight:500; color:#F3F4F8; }
+    .cval { display:flex; align-items:baseline; gap:8px; }
+    .camt { font-size:14px; font-weight:600; color:#F3F4F8; font-variant-numeric:tabular-nums; }
+    .cpct { font-size:11px; color:#616774; font-variant-numeric:tabular-nums; width:30px; text-align:right; }
+    .track { height:5px; border-radius:3px; background:#1E212A; overflow:hidden; }
+    .fill { height:5px; border-radius:3px; background:#4F68E8; }
+    .tab { flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; color:#616774; }
+    .tab.on { color:#6E8BFF; }
+    .tlabel { font-size:10px; font-weight:600; letter-spacing:0.04em; }
+  </style>
+</helmet>
+<div style="width:390px;height:844px;background:#0E0F13;color:#F3F4F8;display:flex;flex-direction:column;overflow:hidden;position:relative">
+
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:64px 20px 0">
+    <div style="width:36px;height:36px;border-radius:12px;background:#1A1E27;display:flex;align-items:center;justify-content:center;color:#9AA0AF">
+      <svg style="width:16px;height:16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg>
+    </div>
+    <div style="font-size:17px;font-weight:700">September 2026</div>
+    <div style="width:36px;height:36px;border-radius:12px;background:#1A1E27;display:flex;align-items:center;justify-content:center;color:#3A3F4C">
+      <svg style="width:16px;height:16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:8px;padding:26px 20px 22px">
+    <div class="eyebrow">SPENT THIS MONTH</div>
+    <div class="mono" style="font-size:42px;font-weight:600;letter-spacing:-0.02em;line-height:1;font-variant-numeric:tabular-nums">US$ 1.284</div>
+    <div style="font-size:13px;color:#9AA0AF">US$ 412 in dollars&nbsp;&nbsp;+&nbsp;&nbsp;AR$ 1.295.000 in pesos</div>
+  </div>
+
+  <div style="border-top:1px solid #1F222B;padding-top:12px;flex:1;overflow:hidden">
+
+    <div class="crow">
+      <div class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v4a2 2 0 0 0 4 0V3"></path><path d="M7 3v18"></path><path d="M17 3c-1.6 1.2-2.5 3.2-2.5 5.5 0 2 1 2.5 2.5 2.5V21"></path></svg></div>
+      <div class="cmain">
+        <div class="ctop"><span class="cname">Food &amp; Drink</span><span class="cval"><span class="camt mono">US$ 382</span><span class="cpct mono">30%</span></span></div>
+        <div class="track"><div class="fill" style="width:100%"></div></div>
+      </div>
+    </div>
+
+    <div class="crow">
+      <div class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"></path><path d="M6 9.5V20h12V9.5"></path></svg></div>
+      <div class="cmain">
+        <div class="ctop"><span class="cname">Housing</span><span class="cval"><span class="camt mono">US$ 290</span><span class="cpct mono">23%</span></span></div>
+        <div class="track"><div class="fill" style="width:76%;background:#5B6CA6"></div></div>
+      </div>
+    </div>
+
+    <div class="crow">
+      <div class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"></circle><circle cx="17" cy="20" r="1.4"></circle><path d="M3 4h2l2.5 12h10L20 8H6"></path></svg></div>
+      <div class="cmain">
+        <div class="ctop"><span class="cname">Groceries</span><span class="cval"><span class="camt mono">US$ 214</span><span class="cpct mono">17%</span></span></div>
+        <div class="track"><div class="fill" style="width:56%;background:#5B6CA6"></div></div>
+      </div>
+    </div>
+
+    <div class="crow">
+      <div class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></div>
+      <div class="cmain">
+        <div class="ctop"><span class="cname">Other</span><span class="cval"><span class="camt mono">US$ 129</span><span class="cpct mono">10%</span></span></div>
+        <div class="track"><div class="fill" style="width:34%;background:#4A557E"></div></div>
+      </div>
+    </div>
+
+    <div class="crow">
+      <div class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 15l1.4-4.6A2 2 0 0 1 8.8 9h6.4a2 2 0 0 1 1.9 1.4L18.5 15"></path><rect x="4" y="14" width="16" height="5" rx="1.6"></rect></svg></div>
+      <div class="cmain">
+        <div class="ctop"><span class="cname">Transport</span><span class="cval"><span class="camt mono">US$ 96</span><span class="cpct mono">7%</span></span></div>
+        <div class="track"><div class="fill" style="width:25%;background:#4A557E"></div></div>
+      </div>
+    </div>
+
+    <div class="crow">
+      <div class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div>
+      <div class="cmain">
+        <div class="ctop"><span class="cname">Subscriptions</span><span class="cval"><span class="camt mono">US$ 75</span><span class="cpct mono">6%</span></span></div>
+        <div class="track"><div class="fill" style="width:19%;background:#39415E"></div></div>
+      </div>
+    </div>
+
+    <div class="crow">
+      <div class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"></path></svg></div>
+      <div class="cmain">
+        <div class="ctop"><span class="cname">Health</span><span class="cval"><span class="camt mono">US$ 58</span><span class="cpct mono">5%</span></span></div>
+        <div class="track"><div class="fill" style="width:15%;background:#39415E"></div></div>
+      </div>
+    </div>
+
+    <div class="crow">
+      <div class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M7 5v14M17 5v14"></path></svg></div>
+      <div class="cmain">
+        <div class="ctop"><span class="cname">Entertainment</span><span class="cval"><span class="camt mono">US$ 40</span><span class="cpct mono">3%</span></span></div>
+        <div class="track"><div class="fill" style="width:11%;background:#39415E"></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="position:absolute;left:0;right:0;bottom:0;height:82px;padding-bottom:18px;background:rgba(14,15,19,0.92);border-top:1px solid #1F222B;display:flex;align-items:center">
+    <div class="tab">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg>
+      <span class="tlabel">Expenses</span>
+    </div>
+    <div class="tab on">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 20V10M12 20V4M19 20v-7"></path></svg>
+      <span class="tlabel">Months</span>
+    </div>
+    <div class="tab">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+      <span class="tlabel">Subs</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

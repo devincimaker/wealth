@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500;600;700&display=swap">
+  <style>
+    body { margin:0; font-family:-apple-system,'SF Pro Text','Helvetica Neue',sans-serif; background:#0E0F13; }
+    a { color:#6E8BFF; } a:hover { color:#8CA2FF; }
+    .mono { font-family:'Spline Sans Mono',ui-monospace,'SF Mono',Menlo,monospace; }
+    .eyebrow { font-family:'Spline Sans Mono',ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:0.14em; font-weight:600; color:#616774; }
+    .cell { width:52px; height:52px; border-radius:16px; background:#1A1E27; border:1px solid #272B35; color:#9AA0AF; display:flex; align-items:center; justify-content:center; }
+    .cell svg { width:22px; height:22px; }
+    .cell.on { background:#1F2530; border-color:#4F68E8; color:#6E8BFF; box-shadow:0 0 0 3px rgba(79,104,232,0.25); }
+  </style>
+</helmet>
+<div style="width:390px;height:844px;background:#14161C;color:#F3F4F8;display:flex;flex-direction:column;overflow:hidden;border-radius:28px 28px 0 0;border-top:1px solid #272B35">
+
+  <div style="display:flex;justify-content:center;padding:12px 0 2px"><div style="width:36px;height:5px;border-radius:3px;background:#2E323E"></div></div>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 24px 0">
+    <div style="font-size:20px;font-weight:700">Edit category</div>
+    <div style="width:32px;height:32px;border-radius:16px;background:#1F222B;display:flex;align-items:center;justify-content:center;color:#9AA0AF">
+      <svg style="width:15px;height:15px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </div>
+  </div>
+
+  <div style="padding:28px 24px 0;display:flex;flex-direction:column;gap:10px">
+    <div class="eyebrow">NAME</div>
+    <div style="display:flex;align-items:center;gap:2px;height:52px;border-radius:16px;background:#1A1E27;border:1px solid #272B35;padding:0 16px">
+      <span style="font-size:16px;font-weight:500">Food &amp; Drink</span>
+      <span style="width:2px;height:22px;border-radius:1px;background:#4F68E8"></span>
+    </div>
+  </div>
+
+  <div style="padding:26px 24px 0;display:flex;flex-direction:column;gap:12px">
+    <div class="eyebrow">ICON</div>
+    <div style="display:grid;grid-template-columns:repeat(6, minmax(0, 1fr));gap:10px">
+      <div class="cell on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v4a2 2 0 0 0 4 0V3"></path><path d="M7 3v18"></path><path d="M17 3c-1.6 1.2-2.5 3.2-2.5 5.5 0 2 1 2.5 2.5 2.5V21"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h11v7a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z"></path><path d="M16 9h2a2.5 2.5 0 0 1 0 5h-2"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"></circle><circle cx="17" cy="20" r="1.4"></circle><path d="M3 4h2l2.5 12h10L20 8H6"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 15l1.4-4.6A2 2 0 0 1 8.8 9h6.4a2 2 0 0 1 1.9 1.4L18.5 15"></path><rect x="4" y="14" width="16" height="5" rx="1.6"></rect></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"></path><path d="M6 9.5V20h12V9.5"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M7 5v14M17 5v14"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3L3 10.5l6.5 2L11 20l3.5-5.5L21 3z"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="1.5"></rect><path d="M12 10v10M4 14h16"></path><path d="M12 10s-4 0-4-3a2 2 0 0 1 4-1 2 2 0 0 1 4 1c0 3-4 3-4 3z"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h14v18H6a2 2 0 0 1-2-2z"></path><path d="M20 17H6a2 2 0 0 0-2 2"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l10-2v13"></path><circle cx="6.5" cy="18" r="2.5"></circle><circle cx="16.5" cy="16" r="2.5"></circle></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"></rect><path d="M11 18h2"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="10" rx="5"></rect><path d="M8 11v4M6 13h4"></path><circle cx="15.5" cy="12" r="0.8"></circle><circle cx="17.5" cy="14" r="0.8"></circle></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4l4 2 4-2 4 4-3 2.5V21H7V10.5L4 8z"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 20V10M12 20V4M19 20v-7"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"></rect><path d="M4 9.5h16M8 3v4M16 3v4"></path></svg></div>
+      <div class="cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="19" cy="12" r="1.3"></circle></svg></div>
+    </div>
+  </div>
+
+  <div style="margin-top:auto;padding:0 24px 40px;display:flex;flex-direction:column;gap:12px">
+    <div style="height:54px;border-radius:16px;background:#4F68E8;display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-size:16px;font-weight:600">Save</div>
+    <div style="display:flex;align-items:center;justify-content:center;height:40px;color:#FF6262;font-size:14px;font-weight:500">Delete category</div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
