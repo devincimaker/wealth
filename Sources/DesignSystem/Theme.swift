@@ -17,6 +17,14 @@ extension Color {
     static let wAmber = Color(wHex: 0xE8B45A)
     static let wGreen = Color(wHex: 0x7DDB9C)
     static let wRed = Color(wHex: 0xFF6262)
+    static let wRedButton = Color(wHex: 0xC43C3C)
+    static let wControl = Color(wHex: 0x1F222B)
+    static let wChipSelected = Color(wHex: 0x1F2530)
+    static let wTrack = Color(wHex: 0x1E212A)
+    // Ramp for breakdown bars and the recording waveform, brightest first.
+    static let wBarMid = Color(wHex: 0x5B6CA6)
+    static let wBarDim = Color(wHex: 0x4A557E)
+    static let wBarFaint = Color(wHex: 0x39415E)
 
     private init(wHex hex: UInt32) {
         self.init(

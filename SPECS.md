@@ -12,7 +12,7 @@ A personal, native iPhone app for tracking expenses. Built for one user (me). No
 
 ## v1 scope
 
-1. Log individual expenses (manual form + voice quick entry: Whisper STT + Claude parsing).
+1. Log individual expenses (manual form + voice quick entry: Whisper STT + LLM parsing).
 2. Recurring subscriptions that auto-post expenses each cycle.
 3. Categories with monthly totals.
 4. Multi-currency (USD + ARS today, open-ended) with a base-currency view.
@@ -40,7 +40,7 @@ Borrows Habitron's **optimistic fire-and-forget assistant** (HAB-134, thrive mon
 1. **Record**: `AVAudioRecorder`, m4a, metering for a waveform, hard cap ~1 min.
 2. On release: the recording is **enqueued** in a local persisted queue (SwiftData) and processed by a background task (`beginBackgroundTask` covers the phone-lock case; a killed app resumes the queue on next launch).
 3. **Audio → text**: OpenAI **`whisper-1`** (excellent Spanish, auto-detects language — do NOT pin `language: es`, input mixes English).
-4. **Text → structured expense**: **Claude Haiku** with a structured-output schema — `amount`, `currency` (from "pesos"/"dollars", default last-used), `merchant/note`, `categoryName?` (matched against my category list, never invented), `date` (relative phrases resolved). The expense is **saved directly**.
+4. **Text → structured expense**: a **small OpenAI model** (`gpt-4o-mini`) with **structured outputs** (`strict: true`), so the schema is enforced rather than trusted — `amount`, `currency` (from "pesos"/"dollars", default last-used), `merchant/note`, `categoryName?` (matched against my category list, never invented), `date` (relative phrases resolved). The expense is **saved directly**. One vendor for the whole voice path: same key as Whisper, one bill, one status page.
 
 **Ticker pill** — one floating pill above the tab bar, a summary of the queue, never one per expense:
 - *Working*: amber spinner + current label ("Logging AR$ 40.000 · Cena…") + `+N` badge for items queued behind.
@@ -149,7 +149,7 @@ Seed categories on first launch: Food & Drink, Groceries, Transport, Housing, Su
 
 - **Swift 6 / SwiftUI**, iOS 26 minimum (unlocks Foundation Models; my device supports it).
 - **SwiftData + CloudKit** (`.private` database) for storage/sync. Consequence: all relationships optional, defaults on all attributes — designed above accordingly.
-- **Voice quick add**: `AVAudioRecorder` + `URLSession` calls to OpenAI Whisper and the Claude API (Haiku). No Apple Speech framework, no Foundation Models — both are poor in Spanish, which is half my dictation. API keys live in a local untracked config for v1.
+- **Voice quick add**: `AVAudioRecorder` + `URLSession` calls to OpenAI (Whisper to transcribe, `gpt-4o-mini` with structured outputs to parse). No Apple Speech framework, no Foundation Models — both are poor in Spanish, which is half my dictation. A single API key lives in a local untracked config for v1; it ships inside the app bundle, which is acceptable only while the app is mine alone.
 - **Rates**: plain `URLSession` calls to DolarAPI + a standard rates API; no SDKs.
 - No third-party dependencies. No backend *in v1* (a server is acceptable later when wealth tracking/recommendations or bank sync need one; the STT/parse services are behind protocols so they can move server-side without UI changes).
 - Xcode project, single app target. Capabilities: iCloud (CloudKit), Microphone. Network for rates + voice pipeline.

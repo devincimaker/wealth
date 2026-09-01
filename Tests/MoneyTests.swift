@@ -22,17 +22,33 @@ struct MoneyTests {
         #expect(Money.format(Decimal(5), currency: "EUR") == "EUR 5")
     }
 
-    @Test func convertsAtGivenRate() {
-        let result = Money.convertToBase(Decimal(2970), currency: "ARS", rates: ["ARS": Decimal(1485)])
-        #expect(result == Decimal(2))
+    @Test func roundedFormatDropsCents() {
+        #expect(Money.formatRounded(Decimal(string: "16.77")!, currency: "USD") == "US$ 17")
+        #expect(Money.formatRounded(Decimal(string: "16.2")!, currency: "USD") == "US$ 16")
     }
 
-    @Test func baseCurrencyIsIdentity() {
-        #expect(Money.convertToBase(Decimal(42), currency: "USD", rates: [:]) == Decimal(42))
+    @Test func convertsAtGivenRate() {
+        #expect(Money.convert(Decimal(2970), from: "ARS", to: "USD", rates: ["ARS": Decimal(1485)]) == Decimal(2))
+    }
+
+    @Test func convertsFromBaseIntoAnotherCurrency() {
+        #expect(Money.convert(Decimal(2), from: "USD", to: "ARS", rates: ["ARS": Decimal(1485)]) == Decimal(2970))
+    }
+
+    @Test func convertsBetweenTwoNonBaseCurrencies() {
+        let rates = ["ARS": Decimal(1485), "EUR": Decimal(string: "0.9")!]
+        let result = Money.convert(Decimal(1485), from: "ARS", to: "EUR", rates: rates)
+        #expect(result == Decimal(string: "0.9")!)
+    }
+
+    @Test func sameCurrencyIsIdentity() {
+        #expect(Money.convert(Decimal(42), from: "USD", to: "USD", rates: [:]) == Decimal(42))
+        #expect(Money.convert(Decimal(42), from: "ARS", to: "ARS", rates: [:]) == Decimal(42))
     }
 
     @Test func missingOrInvalidRateReturnsNil() {
-        #expect(Money.convertToBase(Decimal(10), currency: "EUR", rates: ["ARS": Decimal(1485)]) == nil)
-        #expect(Money.convertToBase(Decimal(10), currency: "ARS", rates: ["ARS": Decimal.zero]) == nil)
+        #expect(Money.convert(Decimal(10), from: "EUR", to: "USD", rates: ["ARS": Decimal(1485)]) == nil)
+        #expect(Money.convert(Decimal(10), from: "ARS", to: "USD", rates: ["ARS": Decimal.zero]) == nil)
+        #expect(Money.convert(Decimal(10), from: "USD", to: "EUR", rates: [:]) == nil)
     }
 }

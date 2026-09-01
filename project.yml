@@ -17,6 +17,9 @@ targets:
     type: application
     platform: iOS
     sources: [Sources]
+    configFiles:
+      Debug: Config.xcconfig
+      Release: Config.xcconfig
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.capybarastudios.wealth
@@ -29,6 +32,8 @@ targets:
         UIUserInterfaceStyle: Dark
         NSMicrophoneUsageDescription: Wealth records your voice only while you hold the log button, to turn what you say into an expense.
         ITSAppUsesNonExemptEncryption: false
+        # Fed by Secrets.local.xcconfig; empty when absent, which the app reports.
+        OPENAI_API_KEY: $(OPENAI_API_KEY)
 
   WealthTests:
     type: bundle.unit-test
