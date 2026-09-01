@@ -2,6 +2,8 @@
 
 Canonical guidelines for every agent working on Wealth. `CLAUDE.md` points here. Rules are numbered; reference them by number (§N). Product scope and decisions live in `SPECS.md` — read it first; the design source of truth is the "Wealth v1 UI" canvas (working files in `design/`).
 
+Linear: fioris / Wealth / WEA — https://linear.app/fioris/team/WEA/all
+
 ## §1 No backwards compatibility
 
 This software has exactly one user: its author. There are no fallbacks, shims, legacy branches, or "if the old field is missing" paths. When a new approach is better, commit to it fully: migrate the data and move on. No dead code kept "just in case". No TODOs about backwards compat.
