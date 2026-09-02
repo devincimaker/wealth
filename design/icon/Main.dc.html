@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@500;600&display=swap">
+  <style>
+    body { margin:0; font-family:-apple-system,'SF Pro Text','Helvetica Neue',sans-serif; background:#0E0F13; }
+    a { color:#6E8BFF; } a:hover { color:#8CA2FF; }
+    .eyebrow { font-family:'Spline Sans Mono',ui-monospace,Menlo,monospace; font-size:11px; letter-spacing:0.14em; color:#616774; font-weight:600; }
+    .sizelabel { font-family:'Spline Sans Mono',ui-monospace,Menlo,monospace; font-size:11px; color:#616774; font-variant-numeric:tabular-nums; }
+  </style>
+</helmet>
+<div style="width:720px;height:820px;background:#0E0F13;color:#F3F4F8;display:flex;flex-direction:column;gap:28px;padding:40px;box-sizing:border-box">
+
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="wbg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#1B1F29"></stop>
+        <stop offset="1" stop-color="#12141B"></stop>
+      </linearGradient>
+      <linearGradient id="wstroke" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="#4F68E8"></stop>
+        <stop offset="1" stop-color="#6E8BFF"></stop>
+      </linearGradient>
+      <radialGradient id="wglow" cx="0.5" cy="0.55" r="0.55">
+        <stop offset="0" stop-color="#4F68E8" stop-opacity="0.30"></stop>
+        <stop offset="1" stop-color="#4F68E8" stop-opacity="0"></stop>
+      </radialGradient>
+    </defs>
+  </svg>
+
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div class="eyebrow">WEALTH · APP ICON</div>
+    <div style="font-size:24px;font-weight:600;letter-spacing:-0.01em">Sparkline W</div>
+    <div style="font-size:13px;color:#9AA0AF;line-height:1.5;max-width:520px">The W drawn as a single line, the way the app draws charts and the recording waveform: one indigo stroke with round caps, ending in an amber tick like the live point on a sparkline.</div>
+  </div>
+
+  <div style="display:flex;align-items:flex-end;gap:40px">
+    <svg viewBox="0 0 100 100" style="width:240px;height:240px;filter:drop-shadow(0 12px 32px rgba(0,0,0,0.5))">
+      <path d="M50 0C11 0 0 11 0 50s11 50 50 50 50-11 50-50S89 0 50 0Z" fill="url(#wbg)"></path>
+      <path d="M50 0C11 0 0 11 0 50s11 50 50 50 50-11 50-50S89 0 50 0Z" fill="url(#wglow)"></path>
+      <path d="M24 34 37.5 66 50 42 62.5 66 76 34" fill="none" stroke="url(#wstroke)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <circle cx="76" cy="34" r="4.6" fill="#E8B45A"></circle>
+    </svg>
+    <div style="display:flex;align-items:flex-end;gap:24px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <svg viewBox="0 0 100 100" style="width:116px;height:116px">
+          <path d="M50 0C11 0 0 11 0 50s11 50 50 50 50-11 50-50S89 0 50 0Z" fill="url(#wbg)"></path>
+          <path d="M50 0C11 0 0 11 0 50s11 50 50 50 50-11 50-50S89 0 50 0Z" fill="url(#wglow)"></path>
+          <path d="M24 34 37.5 66 50 42 62.5 66 76 34" fill="none" stroke="url(#wstroke)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="76" cy="34" r="4.6" fill="#E8B45A"></circle>
+        </svg>
+        <span class="sizelabel">116</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <svg viewBox="0 0 100 100" style="width:58px;height:58px">
+          <path d="M50 0C11 0 0 11 0 50s11 50 50 50 50-11 50-50S89 0 50 0Z" fill="url(#wbg)"></path>
+          <path d="M50 0C11 0 0 11 0 50s11 50 50 50 50-11 50-50S89 0 50 0Z" fill="url(#wglow)"></path>
+          <path d="M24 34 37.5 66 50 42 62.5 66 76 34" fill="none" stroke="url(#wstroke)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="76" cy="34" r="4.6" fill="#E8B45A"></circle>
+        </svg>
+        <span class="sizelabel">58</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <svg viewBox="0 0 100 100" style="width:40px;height:40px">
+          <path d="M50 0C11 0 0 11 0 50s11 50 50 50 50-11 50-50S89 0 50 0Z" fill="url(#wbg)"></path>
+          <path d="M50 0C11 0 0 11 0 50s11 50 50 50 50-11 50-50S89 0 50 0Z" fill="url(#wglow)"></path>
+          <path d="M24 34 37.5 66 50 42 62.5 66 76 34" fill="none" stroke="url(#wstroke)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="76" cy="34" r="4.6" fill="#E8B45A"></circle>
+        </svg>
+        <span class="sizelabel">40</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <div class="eyebrow">ON THE HOME SCREEN</div>
+    <div style="border-radius:20px;background:linear-gradient(180deg,#12141B 0%,#0B0C10 100%);border:1px solid #1F222B;padding:26px 20px 20px;display:flex;justify-content:center;gap:34px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px">
+        <div style="width:60px;height:60px;border-radius:14px;background:#1A1E27"></div>
+        <div style="width:38px;height:7px;border-radius:4px;background:#272B35"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px">
+        <div style="width:60px;height:60px;border-radius:14px;background:#1A1E27"></div>
+        <div style="width:44px;height:7px;border-radius:4px;background:#272B35"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:7px">
+        <svg viewBox="0 0 100 100" style="width:60px;height:60px">
+          <path d="M50 0C11 0 0 11 0 50s11 50 50 50 50-11 50-50S89 0 50 0Z" fill="url(#wbg)"></path>
+          <path d="M50 0C11 0 0 11 0 50s11 50 50 50 50-11 50-50S89 0 50 0Z" fill="url(#wglow)"></path>
+          <path d="M24 34 37.5 66 50 42 62.5 66 76 34" fill="none" stroke="url(#wstroke)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="76" cy="34" r="4.6" fill="#E8B45A"></circle>
+        </svg>
+        <span style="font-size:11px;color:#F3F4F8">Wealth</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px">
+        <div style="width:60px;height:60px;border-radius:14px;background:#1A1E27"></div>
+        <div style="width:32px;height:7px;border-radius:4px;background:#272B35"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size:12px;color:#616774;line-height:1.55;max-width:560px">Tradeoff: it reads as abstract line art before it reads as a W, and the amber tick nearly disappears at 40 px. Options B and C sit to the right.</div>
+
+</div>
+</x-dc>
+</body>
+</html>

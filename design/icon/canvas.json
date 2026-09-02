@@ -1,0 +1,11 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 720, "h": 820, "title": "Sparkline W (lead)" },
+    { "file": "OptionB.dc.html", "x": 820, "y": 0, "w": 380, "h": 520, "title": "Option B: Month bars" },
+    { "file": "OptionC.dc.html", "x": 1300, "y": 0, "w": 380, "h": 520, "title": "Option C: Waveform" }
+  ],
+  "annotations": [
+    { "id": "pick-note", "x": 820, "y": 580, "w": 300, "text": "Pick a direction (or tweak it right here and save), then tell me: I will export the 1024 px icon and wire it into the Xcode asset catalog so the home screen stops being blank." }
+  ],
+  "launch": { "view": "canvas" }
+}
