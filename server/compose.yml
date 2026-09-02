@@ -1,0 +1,28 @@
+# Production stack on the Hetzner box (/opt/wealth). The image is built on
+# the Mac and streamed over ssh (docker save | docker load), like thrive's
+# deploy. Joins habitron's docker network so the box's shared Caddy can proxy
+# https://wealth.91.98.45.41.nip.io to it by container name.
+services:
+  wealth-server:
+    image: wealth-server:${WEALTH_TAG:-latest}
+    container_name: wealth-server
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: "3002"
+    expose:
+      - "3002"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3002/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    networks:
+      - habitron
+
+networks:
+  habitron:
+    name: habitron_default
+    external: true

@@ -1,0 +1,24 @@
+{
+  "name": "wealth-server",
+  "private": true,
+  "type": "module",
+  "description": "Voice parse service for Wealth: audio + ledger context in, structured items out. Claude via subscription auth, Whisper for STT.",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "test": "node --import tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.241",
+    "express": "^4.21.0",
+    "multer": "^1.4.5-lts.1",
+    "tsx": "^4.19.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

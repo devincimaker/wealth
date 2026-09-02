@@ -19,4 +19,11 @@ echo "== deadcode =="
 echo "== test =="
 ./scripts/test.sh
 
+echo "== server =="
+if [ -d server/node_modules ]; then
+  (cd server && npm test && npm run typecheck)
+else
+  echo "server: node_modules missing; run npm install in server/ (SKIPPED)"
+fi
+
 echo "gate: green"

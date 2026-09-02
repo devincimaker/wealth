@@ -6,5 +6,7 @@ DerivedData/
 xcuserdata/
 # API keys (§8). Never committed.
 Secrets.local.xcconfig
+server/.env
+server/node_modules/
 # Seeded design canvas output; regenerated from design/*.dc.html + canvas.json.
 design/wealth-v1-ui.html
