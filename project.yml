@@ -33,7 +33,11 @@ targets:
         NSMicrophoneUsageDescription: Wealth records your voice only while you hold the log button, to turn what you say into an expense.
         ITSAppUsesNonExemptEncryption: false
         # Fed by Secrets.local.xcconfig; empty when absent, which the app reports.
-        OPENAI_API_KEY: $(OPENAI_API_KEY)
+        WEALTH_SERVER_URL: $(WEALTH_SERVER_URL)
+        WEALTH_SERVER_TOKEN: $(WEALTH_SERVER_TOKEN)
+        # The dev server is plain http on the LAN; production goes behind TLS.
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
 
   WealthTests:
     type: bundle.unit-test

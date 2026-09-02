@@ -111,10 +111,16 @@ private struct ActivityRow: View {
         case .queued, .working:
             [RowAction(title: "Cancel") { queue.cancel(capture) }]
         case .applied:
-            [
-                RowAction(title: "Undo") { queue.undo(capture) },
-                RowAction(title: "Edit") { if let expense = queue.expense(for: capture) { onEdit(expense) } },
-            ]
+            // Edit only when the capture made exactly one expense; a batch
+            // has no single record to open, so its rows are edited in place.
+            if let expense = queue.expense(for: capture) {
+                [
+                    RowAction(title: "Undo") { queue.undo(capture) },
+                    RowAction(title: "Edit") { onEdit(expense) },
+                ]
+            } else {
+                [RowAction(title: "Undo") { queue.undo(capture) }]
+            }
         case .failed:
             [
                 RowAction(title: "Retry", tint: .wAmber) { queue.retry(capture) },
